@@ -25,7 +25,7 @@ async function add(){
         delet.textContent = "excluir";
 
         taskList.appendChild(li); 
-        taskList.appendChild(delet); // Adiciona o botão de exclusão fora do li
+        taskList.appendChild(delet); 
     });
 }
 
@@ -62,13 +62,13 @@ btn.addEventListener("click", async(e) => {
     delet.textContent = "excluir";
 
     taskList.appendChild(li); 
-    taskList.appendChild(delet); // Adiciona o botão de exclusão fora do li
+    taskList.appendChild(delet); 
 });
 
 taskList.addEventListener('click', async (event) => {
     if (event.target.classList.contains('delete-btn')) {
         const index = Array.from(taskList.childNodes).indexOf(event.target);
-        const li = taskList.childNodes[index - 1]; // Acessa o item da lista correspondente
+        const li = taskList.childNodes[index - 1];
 
         if (!li) {
             console.error('Item da lista não encontrado');
